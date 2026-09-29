@@ -1,0 +1,133 @@
+basePath: /api/v1
+definitions:
+  entity.Dorm:
+    properties:
+      address:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      facilities:
+        items:
+          type: string
+        type: array
+      id:
+        type: string
+      images:
+        items:
+          type: string
+        type: array
+      latitude:
+        type: number
+      longitude:
+        type: number
+      price:
+        type: number
+      seller_id:
+        type: string
+      status:
+        $ref: '#/definitions/entity.DormStatus'
+      title:
+        type: string
+    type: object
+  entity.DormStatus:
+    enum:
+    - pending
+    - approved
+    - rejected
+    type: string
+    x-enum-varnames:
+    - StatusPending
+    - StatusApproved
+    - StatusRejected
+host: localhost:8080
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is the backend API for the DormHunt platform.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: DormHunt API
+  version: "1.0"
+paths:
+  /dorms:
+    get:
+      description: Get a list of all dorms that have been approved.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/entity.Dorm'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: List all approved dorms
+      tags:
+      - dorms
+    post:
+      consumes:
+      - application/json
+      description: Create a new dorm listing with the provided details.
+      parameters:
+      - description: Dorm object
+        in: body
+        name: dorm
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Dorm'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/entity.Dorm'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create a new dorm listing
+      tags:
+      - dorms
+  /dorms/{id}:
+    get:
+      description: Get detailed information about a specific dorm listing.
+      parameters:
+      - description: Dorm ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/entity.Dorm'
+        "400":
+          description: Invalid ID
+          schema:
+            type: string
+        "404":
+          description: Dorm not found
+          schema:
+            type: string
+      summary: Get a dorm by ID
+      tags:
+      - dorms
+swagger: "2.0"

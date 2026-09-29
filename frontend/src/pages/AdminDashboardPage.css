@@ -1,0 +1,146 @@
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.admin-dashboard__header {
+  text-align: center;
+}
+
+.admin-dashboard__header h1 {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--font-size-3xl);
+  color: var(--color-neutral-900);
+}
+
+.admin-dashboard__header p {
+  margin: 0;
+  color: var(--color-neutral-600);
+}
+
+.admin-loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12);
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.stat-value {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+}
+
+.stat-label {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-sm);
+}
+
+.admin-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.admin-section h2 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  color: var(--color-neutral-900);
+}
+
+.reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.report-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.report-info {
+  flex: 1;
+}
+
+.report-info h3 {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-900);
+}
+
+.report-info p {
+  margin: 0 0 var(--space-2) 0;
+  color: var(--color-neutral-700);
+  font-size: var(--font-size-sm);
+}
+
+.report-date {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-xs);
+}
+
+.report-status {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.report-modal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.report-modal h2 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  color: var(--color-neutral-900);
+}
+
+.report-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-neutral-50);
+  border-radius: var(--border-radius-md);
+}
+
+.report-details p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.modal-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .report-row {
+    flex-direction: column;
+  }
+
+  .report-status {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,45 @@
+# Dependency directories
+node_modules/
+
+# Build and distribution directories
+dist/
+build/
+bin/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+!*.env.example
+!.env.example
+
+# Go binaries and test artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.out
+*.test
+*.prof
+
+# Logs and temp files
+*.log
+logs/
+tmp/
+temp/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS metadata
+.DS_Store
+Thumbs.db
+master.md

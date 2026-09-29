@@ -1,0 +1,113 @@
+.search-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.search-page__title {
+  margin: 0;
+  font-size: var(--font-size-3xl);
+  color: var(--color-neutral-900);
+}
+
+.search-page__content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-8);
+}
+
+.search-page__filters {
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.filters__title {
+  margin: 0 0 var(--space-6) 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-900);
+}
+
+.filters__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.filters__group label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  font-size: var(--font-size-sm);
+}
+
+.filters__price {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filters__price input {
+  flex: 1;
+  padding: var(--space-2) var(--space-3) !important;
+  margin-bottom: 0 !important;
+}
+
+.search-page__listings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.search-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-page__count {
+  margin: 0;
+  color: var(--color-neutral-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.search-page__loading,
+.search-page__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  padding: var(--space-12);
+  background-color: var(--color-neutral-50);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  min-height: 300px;
+}
+
+.search-page__empty p {
+  margin: 0;
+  color: var(--color-neutral-600);
+}
+
+@media (max-width: 1024px) {
+  .search-page__content {
+    grid-template-columns: 1fr;
+  }
+
+  .search-page__filters {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+}

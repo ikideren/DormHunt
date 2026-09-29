@@ -1,0 +1,113 @@
+.owner-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.owner-dashboard h1 {
+  margin: 0;
+  font-size: var(--font-size-3xl);
+  color: var(--color-neutral-900);
+}
+
+.owner-loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12);
+}
+
+.owner-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+}
+
+.stat > div:nth-child(2) {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.owner-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.owner-section h2 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  color: var(--color-neutral-900);
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.message-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-content h3 {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-900);
+}
+
+.message-property {
+  margin: 0 0 var(--space-2) 0;
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.message-text {
+  margin: 0 0 var(--space-2) 0;
+  color: var(--color-neutral-700);
+  font-size: var(--font-size-sm);
+}
+
+.message-date {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-xs);
+}
+
+.message-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .message-row {
+    flex-direction: column;
+  }
+
+  .message-actions {
+    justify-content: flex-start;
+  }
+}

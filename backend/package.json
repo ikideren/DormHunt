@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "@supabase/supabase-js": "^2.105.4"
+  }
+}

@@ -1,0 +1,124 @@
+.listing-card-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.listing-card-link:hover .listing-card {
+  box-shadow: 0 24px 56px rgba(16, 24, 40, 0.14);
+  transform: translateY(-6px);
+}
+
+.listing-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 26px;
+}
+
+.listing-card__image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(97, 87, 255, 0.08), rgba(255, 255, 255, 0));
+}
+
+.listing-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.listing-card-link:hover .listing-card__image {
+  transform: scale(1.045);
+}
+
+.listing-card__type {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+}
+
+.listing-card__favorite {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 2.15rem;
+  height: 2.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0 8px 18px rgba(16, 24, 40, 0.12);
+  transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
+}
+
+.listing-card__favorite:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  background: #fff;
+}
+
+.listing-card__rating {
+  position: absolute;
+  bottom: 0.9rem;
+  left: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 0.4rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 10px 18px rgba(16, 24, 40, 0.08);
+}
+
+.listing-card__rating-value {
+  color: var(--color-neutral-900);
+}
+
+.listing-card__reviews {
+  color: var(--color-neutral-500);
+  font-size: var(--font-size-xs);
+}
+
+.listing-card__title {
+  margin: 0 0 0.45rem 0;
+  font-family: var(--font-family-display);
+  font-size: 1.35rem;
+  line-height: 1.08;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+}
+
+.listing-card__location {
+  margin: 0 0 0.45rem 0;
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-sm);
+}
+
+.listing-card__price {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+}
+
+.listing-card__facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.listing-card__details-btn {
+  width: 100%;
+}
